@@ -14,6 +14,11 @@
     font-family: adobe-italic;
     src: url(./Fonts/adobefont-italic.woff);
 }
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0; 
 }
@@ -50,8 +55,11 @@ header {
 .logo {
   display: flex;
   color: #FA0F00;
+}
+
+.logo > p {
   font-size: 18px;
-  font-family: adobe-bold,cursive;
+  font-family: adobe-bold, cursive;
 }
 
 .logo > img {
@@ -106,7 +114,6 @@ main{
 
 .home{
   display: flex;
-  /* padding: 0 40px; */
   justify-content: center;
   align-items: center;
   height: 600px;
@@ -153,8 +160,7 @@ button{
   border: 2px solid #e1e1e1;
   border-radius: 4px;
   padding: 24px 24px 8px;
-  max-height: 254px;
-  width:500px;
+  width:550px;
   color: #2c2c2c;
   background-color: rgba(251,251,251,0.26);
 }
@@ -318,6 +324,9 @@ hr{
   background-repeat: round;
 }
 .acrobat{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   grid-area: acrobat;
   background-image: url(./Images/Homepage.Acrobat_powerhouse_pod.background.420x500.jpg.img.jpg);
   background-size: contain;
@@ -327,9 +336,8 @@ hr{
   padding: 36px 24px 0; 
 }
 .acrobat>img{
-  width: 367px;
+  width: 390px;
   padding-left: 24px;
-  height: 352px;
 }
 .middle{
   padding-left: 100px;
@@ -342,7 +350,7 @@ hr{
   background-position: 50% 50%;
 }
 .middle-text{
-  width: 370px;
+  max-width: 370px;
 }
 .middle-text>h1,
 .middle1-text>h2{
@@ -366,9 +374,16 @@ hr{
   display: flex;
   justify-content: space-between;
 }
-.reader{
-  width: 391px;
+.reader,
+.cloud,
+.explore,
+.experience,
+.data,
+.business {
   height: 500px;
+  width: 391px;
+}
+.reader{
   display: flex;
   flex-direction: column;
   background-image: url(./Images/Homepage.Acrobat_powerhouse_pod.background.420x500.jpg.img.jpg);
@@ -388,8 +403,6 @@ hr{
 .cloud{
   display: flex;
   flex-direction: column;
-  width:391px;
-  height: 500px;
   background-color: #eb1000;
   color: #fff;
 }
@@ -398,9 +411,7 @@ hr{
   color: #fff;
 }
 .explore{
-  width: 343px;
   color: #fff;
-  height: 440px;
   background-color: #4b1640;
 }
 .explore>hr{
@@ -417,12 +428,6 @@ hr{
   display: flex;
   align-items: center;
   color:#fff;
-}
-.experience,
-.data,
-.business{
-  width: 343px;
-  height: 440px;
 }
 .experience{
   background-image: url(./Images/EML-homepage-single-desktop-1_v2.jpeg);
@@ -531,6 +536,7 @@ footer a:hover{
   filter: invert(27%) sepia(0%) saturate(1%) hue-rotate(163deg) brightness(98%) contrast(87%);
 }
 .social-links img{
+  cursor: pointer;
   width: 20px;
   margin-right: 23px;
 }
